@@ -4,7 +4,7 @@ import AWS from 'aws-sdk'
 const app = express()
 app.set('json spaces', 2)
 
-AWS.config.update({region: 'REGION'});
+AWS.config.update({region: 'us-east-1'});
 var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
 var params = {
