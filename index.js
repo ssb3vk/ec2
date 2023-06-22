@@ -15,7 +15,7 @@ app.listen(5001, () => console.log('Api running on port 5001'))
 
 ec2.describeInstances(params, function(err, data) {
         if (err) {
-                app.get('/', (req, res) => res.json('ERROR', err.stack));
+                app.get('/', (req, res) => res.json(err.stack));
         } else {
                 app.get('/', (req, res) => res.json(data));
         }
